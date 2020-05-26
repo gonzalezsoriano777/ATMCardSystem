@@ -6,13 +6,19 @@ button {
   width: 100px;
 }
 
+.decrement {
+  background-color: red;
+  color: white;
+  padding: 15px 30px;
+}
+
 .count {
   font-size: 50px;
   padding: 15px 30px;
 }
 
 .reset{
-  background-color : red;
+  background-color : black;
   width: 200px;
 }
 
