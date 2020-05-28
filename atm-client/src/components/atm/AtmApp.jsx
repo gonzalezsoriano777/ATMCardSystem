@@ -9,6 +9,7 @@ class AtmApp extends Component {
           <Fragment>
             <HeaderComponent />
             <Switch>
+              <Route path="/" component={LoginComponent} />
               <Route path="/login" component={LoginComponent} />
               <Route path="/welcome/:name" component={WelcomeComponent} />
               <Route path="/todos" component={ListTodosComponent} />
