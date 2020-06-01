@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import AtmApp from './components/atm/AtmApp';
+import AtmApp from './components/layout/AtmApp';
 import './bootstrap.css';
+import './atm-bg.jpg';
 
 class App extends Component {
   render() {
