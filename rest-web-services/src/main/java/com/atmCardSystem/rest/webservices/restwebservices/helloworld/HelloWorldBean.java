@@ -1,4 +1,4 @@
-package com.atmCardSystem.rest.webservices.restwebservices;
+package com.atmCardSystem.rest.webservices.restwebservices.helloworld;
 
 public class HelloWorldBean {
 	

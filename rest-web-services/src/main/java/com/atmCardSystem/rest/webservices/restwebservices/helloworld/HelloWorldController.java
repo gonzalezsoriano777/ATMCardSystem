@@ -1,4 +1,4 @@
-package com.atmCardSystem.rest.webservices.restwebservices;
+package com.atmCardSystem.rest.webservices.restwebservices.helloworld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +32,8 @@ public class HelloWorldController {
 	//hello-world/path-variable/HectorInTech
 	@GetMapping(path = "/hello-world/path-variable/{name}")
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) { 
-		return new HelloWorldBean(String.format("Hello World, %s", name));
+		throw new RuntimeException("Something went wrong");
+		//return new HelloWorldBean(String.format("Hello World, %s", name));
 	}
 
 }
