@@ -28,26 +28,32 @@ class WelcomeComponent extends Component {
           Click here to get a customized welcome.
           <button onClick={this.retrieveWelcomeMessage}>Get Welcome Message</button>
         </div>
+        <div className="container">
+          {this.state.welcomeMessage}
+        </div>
+
       </Fragment>
 
     )
   }
 
   retrieveWelcomeMessage() {
-    //HelloWorldService.executeHelloWorld().then(response => this.handleSuccessfulResponse(response))
 
-    // HelloWorldService.executeHelloWorldBeanService().then(response => this.handleSuccessfulResponse(response))
+    HelloWorldService.executeHelloWorldService().then(response => this.handleSuccessfulResponse(response))
 
-    HelloWorldService.executeHelloWorldPathVariableService(this.props.match.params.name).then(response => this.handleSuccessfulResponse(response)).catch(error => this.handleError(error))
+    //HelloWorldService.executeHelloWorldBeanService().then(response => this.handleSuccessfulResponse(response))
+
+    //HelloWorldService.executeHelloWorldPathVariableService(this.props.match.params.name).then(response => this.handleSuccessfulResponse(response)).catch(error => this.handleError(error))
 
   }
 
   handleSuccessfulResponse(response) {
-    this.setState(
-      {
-        welcomeMessage: response.data
-      }
-    )
+    this.setState
+      (
+        {
+          welcomeMessage: response.data
+        }
+      )
   }
 
   handleError(error) {

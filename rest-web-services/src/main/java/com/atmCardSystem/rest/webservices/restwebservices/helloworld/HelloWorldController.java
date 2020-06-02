@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //Controller
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200/welcome/hector")
 public class HelloWorldController {
 	
 	//GET

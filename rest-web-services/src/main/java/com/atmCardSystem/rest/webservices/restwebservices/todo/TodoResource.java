@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.atmCardSystem.rest.webservices.restwebservices.todo.TodoHardCodedService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200/todos")
 public class TodoResource {
 	
 	@Autowired
