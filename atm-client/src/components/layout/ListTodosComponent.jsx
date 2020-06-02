@@ -7,7 +7,7 @@ class ListTodosComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      todo: [
+      todos: [
         // { id: 1, description: 'Learn React', done: false, targetDate: new Date() },
         // { id: 1, description: 'Become a Expert at Something', done: false, targetDate: new Date() },
         // { id: 1, description: 'Visit Japan', done: false, targetDate: new Date() }
@@ -21,7 +21,9 @@ class ListTodosComponent extends Component {
       .then(
         response => {
           //console.log(response);
-          this.setState({ todos: response.data })
+          this.setState({
+            todos: response.data
+          })
         }
       )
   }
@@ -42,13 +44,13 @@ class ListTodosComponent extends Component {
             </thead>
             <tbody>
               {
-                this.state.todo.map(
-                  todo =>
+                this.state.todos.map(
+                  todos =>
                     <tr>
-                      <td>{todo.id}</td>
-                      <td>{todo.description}</td>
-                      <td>{todo.done.toString()}</td>
-                      <td>{todo.targetDate.toString()}</td>
+                      <td>{todos.id}</td>
+                      <td>{todos.description}</td>
+                      <td>{todos.done.toString()}</td>
+                      <td>{todos.targetDate.toString()}</td>
                     </tr>
                 )
               }
