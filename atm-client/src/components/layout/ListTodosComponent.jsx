@@ -5,17 +5,30 @@ import AuthenticationService from '../auth/AuthenticationService';
 class ListTodosComponent extends Component {
 
   constructor(props) {
+    console.log('constructor');
     super(props)
     this.state = {
-      todos: [
-        // { id: 1, description: 'Learn React', done: false, targetDate: new Date() },
-        // { id: 1, description: 'Become a Expert at Something', done: false, targetDate: new Date() },
-        // { id: 1, description: 'Visit Japan', done: false, targetDate: new Date() }
-      ]
+      todos: [],
+      message: null
     }
+
+    this.deleteTodoClicked = this.deleteTodoClicked.bind(this);
+
+  }
+
+  componentWillUnmount() {
+    console.log('componentDidUnmount');
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate');
+    console.log(nextProps);
+    console.log(nextState);
+    return true;
   }
 
   componentDidMount() {
+    console.log('componentDidMount');
     let username = AuthenticationService.getLoggedInUserName;
     TodoDataService.retrieveAllTodos(username)
       .then(
@@ -27,10 +40,22 @@ class ListTodosComponent extends Component {
         }
       )
   }
+
+  deleteTodoClicked(id) {
+    let username = AuthenticationService.getLoggedInUserName();
+    // console.log(id + " " + username);
+    TodoDataService.deleteTodo(username, id)
+      .then(response => {
+        this.setState({ message: `Delete of todo ${id} Successful!` })
+      })
+  }
+
   render() {
+    console.log('render');
     return (
       <div>
         <h1>List Todos</h1>
+        {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
         <div className="container">
 
           <table className="table">
@@ -40,6 +65,7 @@ class ListTodosComponent extends Component {
                 <th>Description</th>
                 <th>Target Date</th>
                 <th>Is Completed?</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -51,6 +77,7 @@ class ListTodosComponent extends Component {
                       <td>{todos.description}</td>
                       <td>{todos.done.toString()}</td>
                       <td>{todos.targetDate.toString()}</td>
+                      <td><button className="btn btn-warning" onClick={() => this.deleteTodoClicked(todos.id)}>Delete</button></td>
                     </tr>
                 )
               }

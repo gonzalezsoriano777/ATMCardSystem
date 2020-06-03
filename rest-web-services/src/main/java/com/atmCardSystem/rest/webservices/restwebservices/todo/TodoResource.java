@@ -24,12 +24,10 @@ public class TodoResource {
 		return todoService.findAll();
 	}
 	
-	
 	@DeleteMapping("/users/{username}/todos/{id}")
 	public ResponseEntity<Void> deleteTodo(
 			@PathVariable String username, @PathVariable long id){
 			
-			// Deletes the todo
 			Todo todo = todoService.deleteById(id);
 			
 			// If it was successful then it show no content
