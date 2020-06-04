@@ -69,6 +69,7 @@ class ListTodosComponent extends Component {
               </tr>
             </thead>
             <tbody>
+
               {
                 this.state.todos.map(
                   todos =>
@@ -81,6 +82,7 @@ class ListTodosComponent extends Component {
                     </tr>
                 )
               }
+
             </tbody>
           </table>
         </div>
