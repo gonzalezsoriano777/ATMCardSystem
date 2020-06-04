@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import AtmApp from './components/layout/AtmApp';
+import AtmApp from './components/AtmApp';
 import './bootstrap.css';
 import './atm-bg.jpg';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <AtmApp />
       </div>
-    )
+    );
   }
 }
-
 
 export default App;
