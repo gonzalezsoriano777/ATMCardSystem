@@ -9,6 +9,17 @@ import WelcomeComponent from './layout/WelcomeComponent';
 import TodoComponent from './layout/TodoComponent';
 
 class AtmApp extends Component {
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     isLoggedIn: false
+  //   }
+
+  //   // this.setLoggedIn = this.setLoggedIn.bind(this);
+  // }
+
   render() {
     return (
       <div className='AtmApp'>
@@ -16,6 +27,12 @@ class AtmApp extends Component {
           <Fragment>
             <HeaderComponent />
             <Switch>
+
+              {/* <Route path="/login" exact render={(props) => (
+                <LoginComponent {...props} setLoggedIn={this.setLoggedIn} />
+              )}
+              /> */}
+
               <Route path='/' exact component={LoginComponent} />
               <Route path='/login' component={LoginComponent} />
               <AuthenticatedRoute
@@ -37,6 +54,13 @@ class AtmApp extends Component {
     );
   }
 }
+
+//   setLoggedIn(param) {
+//     this.setState({
+//       isLoggedIn: param,
+//     });
+//   }
+
 
 function ErrorComponent() {
   return <div>An Error Occured.. GO BACK!</div>;

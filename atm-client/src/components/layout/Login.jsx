@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthenticationService from '../auth/AuthenticationService.js';
+
 class LoginComponent extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,7 @@ class LoginComponent extends Component {
         this.state.username,
         this.state.password
       );
+      //this.props.setLoggedIn(true);
       this.props.history.push(`/welcome/${this.state.username}`);
     } else {
       this.setState({ showSuccessMessage: false });
@@ -66,7 +68,7 @@ class LoginComponent extends Component {
           value={this.state.username}
           onChange={this.handleChange}
         />
-        password:{' '}
+        password:{" "}
         <input
           type='password'
           name='password'
