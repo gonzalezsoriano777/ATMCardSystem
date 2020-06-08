@@ -55,6 +55,7 @@ class AtmApp extends Component {
   }
 }
 
+
 //   setLoggedIn(param) {
 //     this.setState({
 //       isLoggedIn: param,
