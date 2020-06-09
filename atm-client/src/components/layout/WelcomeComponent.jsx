@@ -35,17 +35,18 @@ class WelcomeComponent extends Component {
   }
 
   retrieveWelcomeMessage() {
-    HelloWorldService.executeHelloWorldService().then((response) =>
-      this.handleSuccessfulResponse(response)
-    );
+    // HelloWorldService.executeHelloWorldService().then((response) =>
+    //   this.handleSuccessfulResponse(response)
+    // );
     // HelloWorldService.executeHelloWorldBeanService().then((response) =>
     //   this.handleSuccessfulResponse(response)
     // );
-    // HelloWorldService.executeHelloWorldPathVariableService(
-    //   this.props.match.params.name
-    // )
-    //   .then((response) => this.handleSuccessfulResponse(response))
-    //   .catch((error) => this.handleError(error));
+
+    HelloWorldService.executeHelloWorldPathVariableService(
+      this.props.match.params.name
+    )
+      .then((response) => this.handleSuccessfulResponse(response))
+      .catch((error) => this.handleError(error));
   }
 
   handleSuccessfulResponse(response) {

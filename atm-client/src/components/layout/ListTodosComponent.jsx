@@ -34,7 +34,7 @@ class ListTodosComponent extends Component {
   }
 
   refreshTodos() {
-    let username = AuthenticationService.getLoggedInUserName;
+    let username = AuthenticationService.getLoggedInUserName();
     TodoDataService.retrieveAllTodos(username).then((response) => {
       //console.log(response);
       this.setState({
@@ -55,13 +55,6 @@ class ListTodosComponent extends Component {
   updateTodoClicked(id) {
     console.log('update' + id);
     this.props.history.push(`/todos/${id}`);
-    // /todos/${id}
-    // let username = AuthenticationService.getLoggedInUserName();
-    // //console.log(id + " " + username);
-    // TodoDataService.deleteTodo(username, id).then((response) => {
-    //   this.setState({ message: `Delete of todo ${id} Successful!` });
-    //   this.refreshTodos();
-    // });
   }
 
   render() {
