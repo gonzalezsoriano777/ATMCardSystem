@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TodoDataService from '../../api/todo/TodoDataService';
 import AuthenticationService from '../auth/AuthenticationService';
+import monent from 'moment';
 
 class ListTodosComponent extends Component {
   constructor(props) {
@@ -89,7 +90,7 @@ class ListTodosComponent extends Component {
                 <tr>
                   <td>{todos.id}</td>
                   <td>{todos.description}</td>
-                  <td>{todos.targetDate.toString()}</td>
+                  <td>{monent(todos.targetDate).format('YYYY-MM-DD')}</td>
                   <td>{todos.done.toString()}</td>
                   <td>
                     <button
