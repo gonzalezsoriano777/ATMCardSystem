@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthenticationService from '../auth/AuthenticationService.js';
+import '../comp-css/Login.css';
 
 class LoginComponent extends Component {
   constructor(props) {
@@ -68,13 +69,15 @@ class LoginComponent extends Component {
           value={this.state.username}
           onChange={this.handleChange}
         />
-        password:{" "}
+        <br />
+        password:{' '}
         <input
           type='password'
           name='password'
           value={this.state.password}
           onChange={this.handleChange}
         />
+        <br />
         <button className='btn btn-dark' onClick={this.loginClicked}>
           Login
         </button>

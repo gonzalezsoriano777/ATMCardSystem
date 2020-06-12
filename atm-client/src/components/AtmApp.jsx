@@ -7,9 +7,9 @@ import ListTodosComponent from './layout/ListTodosComponent';
 import HeaderComponent from './layout/Header';
 import WelcomeComponent from './layout/WelcomeComponent';
 import TodoComponent from './layout/TodoComponent';
+import RegisterComponent from './layout/Register';
 
 class AtmApp extends Component {
-
   render() {
     return (
       <div className='AtmApp'>
@@ -17,7 +17,8 @@ class AtmApp extends Component {
           <Fragment>
             <HeaderComponent />
             <Switch>
-              <Route path='/' exact component={LoginComponent} />
+              <Route path='/' exact component={RegisterComponent} />
+              <Route path='/register' component={RegisterComponent} />
               <Route path='/login' component={LoginComponent} />
               <AuthenticatedRoute
                 path='/welcome/:name'
