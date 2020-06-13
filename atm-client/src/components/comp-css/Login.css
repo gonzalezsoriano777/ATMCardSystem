@@ -1,17 +1,19 @@
 input[type='text'] {
-  width: 80%;
+  width: 40%;
+  height: 20%;
   padding: 15px 22px;
   margin: 10px 5px;
   box-sizing: border-box;
 }
 
 input[type='password'] {
-  width: 80%;
+  width: 40%;
+  height: 20%;
   padding: 15px 22px;
   margin: 10px 5px;
   box-sizing: border-box;
 }
 
-button {
-  width: 55%;
+#btn-id {
+  width: 15%;
 }

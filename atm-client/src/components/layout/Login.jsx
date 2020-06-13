@@ -12,9 +12,6 @@ class LoginComponent extends Component {
       showSuccessMessage: false,
     };
 
-    // this.handleusernameChange = this.
-    //   handleusernameChange.bind(this);
-    //   this.handlepasswordChange = this.handlepasswordChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.loginClicked = this.loginClicked.bind(this);
   }
@@ -40,16 +37,6 @@ class LoginComponent extends Component {
     }
     console.log(this.state);
   }
-
-  // handleusernameChange(event) {
-  //   console.log(event.target.name);
-  //   this.setState({ username: event.target.value })
-  // }
-
-  // handlepasswordChange(event) {
-  //   console.log(event.target.value);
-  //   this.setState({ password: event.target.value })
-  // }
 
   render() {
     return (
@@ -78,7 +65,11 @@ class LoginComponent extends Component {
           onChange={this.handleChange}
         />
         <br />
-        <button className='btn btn-dark' onClick={this.loginClicked}>
+        <button
+          id='btn-id'
+          className='btn btn-dark'
+          onClick={this.loginClicked}
+        >
           Login
         </button>
       </div>

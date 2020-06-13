@@ -11,7 +11,7 @@ class HeaderComponent extends Component {
       <header>
         <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
           <div>
-            <a href='/login' className='navbar-brand'>
+            <a href='/register' className='navbar-brand'>
               ATMSystem
             </a>
           </div>

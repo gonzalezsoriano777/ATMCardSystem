@@ -43,7 +43,7 @@ class WelcomeComponent extends Component {
   }
 
   handleSuccessfulResponse(response) {
-    //console.log(response);
+    console.log(response);
     this.setState({
       welcomeMessage: response.data.message,
     });
