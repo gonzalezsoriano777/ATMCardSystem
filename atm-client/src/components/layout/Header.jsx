@@ -9,7 +9,7 @@ class HeaderComponent extends Component {
 
     return (
       <header>
-        <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
+        <nav className='navbar navbar-expand-md navbar-dark bg-primary'>
           <div>
             <a href='/register' className='navbar-brand'>
               ATMSystem
