@@ -9,6 +9,7 @@ import WelcomeComponent from './layout/WelcomeComponent';
 import TodoComponent from './layout/TodoComponent';
 import RegisterComponent from './layout/Register';
 
+// Routes will be changed after checking db build
 class AtmApp extends Component {
   render() {
     return (
