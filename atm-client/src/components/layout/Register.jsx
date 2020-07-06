@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 
 class RegisterComponent extends Component {
   render() {
-    return <div>Register is on the building stage!</div>;
+    return (
+      <div className='container'>
+        <h1>
+          Building stage will be completed tonight after integrating custom API
+        </h1>
+      </div>
+    );
   }
 }
 
