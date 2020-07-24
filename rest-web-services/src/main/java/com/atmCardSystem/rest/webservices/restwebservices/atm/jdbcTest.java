@@ -31,6 +31,7 @@ public class jdbcTest {
 					"INSERT INTO dummytable (Account_ID,firstName, lastName, depositAmount, Account_Type ) VALUES ('1', 'kim', 'jensen', '60', 'checking')");
 			tableData.executeUpdate();
 			tableData.close();
+			
 			myConn.close();
 
 		} catch (Exception e) {
