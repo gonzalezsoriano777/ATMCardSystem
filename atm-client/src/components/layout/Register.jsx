@@ -13,7 +13,6 @@ class RegisterComponent extends Component {
 
   render() {
     return (
-      // Authentication will be put on hold.
       <div className='container'>
         <h1>Register</h1>
         username: <input type='text' name='username' />
