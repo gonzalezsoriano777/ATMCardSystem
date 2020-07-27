@@ -32,7 +32,6 @@ public class jdbcTest {
 			tableData.executeUpdate();
 			tableData.close();
 			
-			// closing db conn string
 			myConn.close();
 
 		} catch (Exception e) {
