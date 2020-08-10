@@ -11,7 +11,7 @@ class HelloWorldService {
 
   executeHelloWorldPathVariableService(name) {
     let username = 'user';
-    let password = 'dummy';
+    let password = '455510bd-07be-4ec1-a3aa-5f2cdf16fa9c';
 
     let basicAuthHeader = 'Basic ' + window.btoa(username + ':' + password);
 
