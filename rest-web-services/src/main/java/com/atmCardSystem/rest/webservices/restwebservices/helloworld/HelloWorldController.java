@@ -14,7 +14,7 @@ public class HelloWorldController {
 	
 	//GET
 	//URI - /hello-world
-	@GetMapping(path="/hello-world")
+	@GetMapping(path="/helloworld")
 	public String helloWorld() {
 		
 		return "Hello World";

@@ -1,4 +1,4 @@
-package com.atmCardSystem.rest.webservices.restwebservices.basic.auth;
+package com.atmCardSystem.rest.basic.auth;
 
 public class AuthenticationBean {
 	

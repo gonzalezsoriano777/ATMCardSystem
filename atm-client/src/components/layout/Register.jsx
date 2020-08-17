@@ -15,9 +15,14 @@ class RegisterComponent extends Component {
     return (
       <div className='container'>
         <h1>Register</h1>
-        username: <input type='text' name='username' />
+        Name: <input type='text' name='username' />
         <br />
         password: <input type='password' name='password' />
+        <br />
+        password2: <input type='password' name='password2' />
+        <button id='btn-id' className='btn btn-dark'>
+          Register
+        </button>
       </div>
     );
   }

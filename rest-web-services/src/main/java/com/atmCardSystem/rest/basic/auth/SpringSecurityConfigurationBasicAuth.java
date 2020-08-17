@@ -1,4 +1,4 @@
-package com.atmCardSystem.rest.webservices.restwebservices.basic.auth;
+package com.atmCardSystem.rest.basic.auth;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
