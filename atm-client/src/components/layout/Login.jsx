@@ -5,11 +5,12 @@ import '../comp-css/Login.css';
 /* 
 
 Goals for tonight session
+
+- Have money sent to CD Mothly ASAP when starting these Goals * Check *
+
 - Have both spring security/basicAuth && Produce a JWT token for user login  
 
 - Record and send demos to cliff of both processes and a video relating to the backend stage of OBP API Process
-
-- Have money sent to CD Mothly ASAP when starting these Goals
 
 */
 
