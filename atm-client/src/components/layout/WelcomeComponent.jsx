@@ -44,6 +44,7 @@ class WelcomeComponent extends Component {
     )
       .then((response) => this.handleSuccessfulResponse(response))
       .catch((error) => this.handleError(error));
+    //console.log(this.props.match.params.name);
   }
 
   handleSuccessfulResponse(response) {
