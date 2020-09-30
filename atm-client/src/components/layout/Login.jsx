@@ -4,9 +4,7 @@ import '../comp-css/Login.css';
 
 /* 
 
-Goals for tonight session
-
-- Have money sent to CD Mothly ASAP when starting these Goals * Check *
+Goals for tonight session * critical *
 
 - Have both spring security/basicAuth && Produce a JWT token for user login  
 
