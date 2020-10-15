@@ -6,9 +6,9 @@ class AuthenticationService {
   //     headers: { authorization: this.createBasicAuthToken(username, password) },
   //   });
 
-  // createBasicAuthToken(username, password) {
-  //   return 'Basic ' + window.btoa(username + ':' + password);
-  // }
+  createBasicAuthToken(username, password) {
+    return 'Basic ' + window.btoa(username + ':' + password);
+  }
 
   registerSuccessfulLogin(username, password) {
     // let basicAuthHeader = 'Basic ' + window.btoa(username + ':' + password);
